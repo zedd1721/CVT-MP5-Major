@@ -1,0 +1,246 @@
+@font-face {
+    font-family: 'roboto';
+    src: url(/Fonts/ROBOTO-REGULAR.TTF);
+}
+
+*{
+    margin: 0%;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'roboto';
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+.main{
+    height: 100vh;
+    width: 100%;
+    background-color: #89C15E;
+}
+
+.header{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 30%;
+    width: 100%;
+    /* background-color: aqua; */
+}
+
+.scoreboard{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px;
+    width: 50%;
+    border: 2px solid white;
+    border-radius: 12px;
+    /* position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%,-50%);*/
+} 
+
+.scoreboard .texthead{
+    color: white;
+    font-weight: 600;
+}
+
+
+.scoreboard .scores{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    /* background-color: red; */
+    /* height: 100%; */
+    /* width: 100%; */
+    
+}
+.scores .compscore,
+.scores .userscore{
+    background-color: white;
+    width: 130px;
+    height: 130px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    
+}
+
+.scores .compscore p,
+.scores .userscore p{
+    color: #656565;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.scores .compscore h1,
+.scores .userscore h1{
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.btm-btn{
+    position: absolute;
+    right: 0;
+    bottom: 30px;
+
+
+}
+
+#rules, #win{
+    
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 10px 40px;
+
+    font-size: 20px;
+    font-weight: 600;
+
+    margin-right: 30px;
+    cursor: pointer;
+}
+#win{
+    display: none;
+}
+
+.rulesbox{
+    position: absolute;
+    right: 30px;
+    bottom: 100px;
+    width: 300px;
+    background-color: #004429;
+    color: #fff;
+    border: 7px solid white;
+    border-radius: 13px;
+
+    display: none;
+}
+.rulesbox .boxheader h3{
+    font-size: 30px;
+    text-align: center;
+    margin: 15px 0;
+}
+.rulesbox .lists{
+    font-size: 15px;
+    /* background-color: red; */
+    padding: 0 30px;
+    padding-bottom: 15px;
+
+}
+.lists ul{
+    list-style-type: square;
+    /* padding: 0; */
+}
+.lists ul li::marker{
+    color: #FFD600;
+}
+.lists ul li{
+    margin-bottom: 10px;
+}
+
+.rulesbox .closebtn{
+    height: 50px;
+    width: 50px;
+    background-color: red;
+    display: grid;
+    place-items: center;
+    border: 5px solid white;
+    border-radius: 100%;
+    
+    position: absolute;
+    right: -30px;
+    top: -30px;
+    cursor: pointer;
+}
+
+.wrapper{
+    width: 100%;
+    height: 70%;
+    position: relative;
+    /* background-color: #656565; */
+}
+
+.container .game{
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%,0);
+
+    display: none;
+}
+
+/* ------------------- */
+
+.line{
+    height: 20px;
+    width: 200px;
+    background-color: #000000A3;
+   
+}
+#line2{
+    transform: rotate(60deg);
+}
+#line3{
+    transform: rotate(120deg);
+}
+
+.option{
+    height: 170px;
+    width: 170px;
+    
+    border-radius: 100%;
+    background-color: white;
+
+    display: grid;
+    place-items: center;
+    box-shadow: -1px 1px 11px 0px #00000059;
+}
+
+
+/* ----------------- */
+
+.upper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* z-index: 10; */
+}
+
+.upper #rock{
+    border: 16px solid #0074B6;
+
+}
+
+.upper #scissor{
+    border: 16px solid #BD00FF;
+
+}
+
+.middle{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: -10;
+
+    display: flex;
+}
+
+
+
+.lower{
+    display: flex;
+    justify-content: center;
+
+    padding-top: 70px;
+}
+
+.lower #paper{
+    border: 16px solid #FFA943;
+}
