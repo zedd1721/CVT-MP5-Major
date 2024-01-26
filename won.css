@@ -61,7 +61,7 @@ html, body{
     font-size: 3vw;
 }
 
-.text #playagain{
+#playagain{
     color: #6B6B6B;
     background-color: white;
     border-radius: 10px;

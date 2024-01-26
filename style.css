@@ -167,14 +167,23 @@ html, body{
     /* background-color: #656565; */
 }
 
+
+
+
+
+
+/* ============================ */
 .container .game{
     position: absolute;
     left: 50%;
     top: 10%;
     transform: translate(-50%,0);
 
-    display: none;
+    /* display: none; */
 }
+
+
+
 
 /* ------------------- */
 
@@ -191,7 +200,9 @@ html, body{
     transform: rotate(120deg);
 }
 
-.option{
+.option,
+.user-selected-option,
+.comp-selected-option{
     height: 170px;
     width: 170px;
     
@@ -201,6 +212,8 @@ html, body{
     display: grid;
     place-items: center;
     box-shadow: -1px 1px 11px 0px #00000059;
+
+    cursor: pointer;
 }
 
 
@@ -213,12 +226,12 @@ html, body{
     /* z-index: 10; */
 }
 
-.upper #rock{
+#rock{
     border: 16px solid #0074B6;
 
 }
 
-.upper #scissor{
+#scissor{
     border: 16px solid #BD00FF;
 
 }
@@ -241,6 +254,121 @@ html, body{
     padding-top: 70px;
 }
 
-.lower #paper{
+#paper{
     border: 16px solid #FFA943;
+}
+
+.result-wrap{
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%,0);
+
+    display: none;
+    
+}
+
+.result_display{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+
+    /* position: absolute; */
+    
+}
+
+.user-selected,
+.comp-selected,
+.result-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+
+.pickedtext{
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+
+.result-text{
+    text-align: center;
+    color: white;
+    letter-spacing: 8px;
+    /* background-color: aliceblue; */
+    justify-content: end;
+    /* padding: 50px 0; */
+}
+
+.result-text #wintext{
+    font-size: 60px;
+    font-weight: 900;
+}
+.result-text #againstpc{
+    font-size: 25px;
+    font-weight: 900;
+}
+
+
+
+
+.c1{
+    width: 350px;
+    height: 350px;
+    background-color: #2E9A2563;
+}
+.c2{
+    width: 300px;
+    height: 300px;
+    background-color: #1DA82BC9;
+}
+.c3{
+    width: 250px;
+    height: 250px;
+    background-color: #3B6720;
+    z-index: -1;
+}
+
+.circle{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+}
+
+.winanimation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 62%;
+    z-index: -1;
+}
+
+@keyframes animate {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+      }
+      50% {
+        transform: scale(1);
+        opacity: 1;
+      } 
+      100%{
+        /* transform: scale(1); */
+        opacity: 0;
+      }
+    }
+
+#Animate{
+    /* display: none; */
+    animation: animate 1.5s linear infinite;
+    /* animation-delay: 1.5s linear infinite; */
 }
