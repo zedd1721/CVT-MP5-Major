@@ -132,6 +132,7 @@ function showWinner(userWin){
         scores.compScore += 1;
         updateScores(scores);
         winPage.style.display = 'none';
+        document.querySelector('#playagain').textContent = 'PLAY AGAIN'
         document.querySelector('#wintext').textContent = 'YOU LOST'
         document.querySelector('#comp').textContent = `${scores.compScore}`;
         document.querySelector('.comp-selected').innerHTML += animation;
